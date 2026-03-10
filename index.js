@@ -9,8 +9,12 @@ async function crawlIPFS() {
     const hash = 'QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco';
 
     console.log(`[${new Date().toISOString()}] Fetching IPFS content for hash: ${hash}`);
-    const response = await axios.get(gateway + hash, { timeout: 10000 });
-
+    const response = await axios.get(gateway + hash, {
+  timeout: 10000,
+  headers: {
+    "User-Agent": "Mozilla/5.0 (compatible; Web3Crawler/1.0)"
+  }
+});
     const preview = response.data.substring(0, 500); // First 500 chars for log
     console.log('Content preview:', preview);
 
