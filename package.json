@@ -1,27 +1,16 @@
 {
-  "name": "ipfs-crawler",
+  "name": "render-keep-alive",
   "version": "1.0.0",
+  "description": "Keep Render web service alive",
   "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "express": "^4.18.0",
     "axios": "^1.6.0"
   },
-  "scripts": {
-    "start": "node ipfs-crawler.js"
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
-```
-
----
-
-## **To Deploy on Render:**
-
-1. **Replace your code** with the fixed version above
-2. **Push to GitHub**
-3. **Render will auto-deploy**
-4. **Check logs** - you should see:
-```
-   IPFS crawler started. Running every 60 seconds...
-   [timestamp] Fetching IPFS content...
-   Trying gateway 1/5: https://gateway.pinata.cloud/ipfs/
-   ✓ Success with gateway: https://gateway.pinata.cloud/ipfs/
-   Content preview: [your content]
