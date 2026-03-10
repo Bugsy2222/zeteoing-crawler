@@ -2,7 +2,7 @@ const axios = require('axios');
 
 async function crawlIPFS() {
   try {
-    const gateway = 'https://cloudflare-ipfs.com/ipfs/';
+    const gateway = 'https://gateway.pinata.cloud/ipfs/';
     const hash = 'QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco';
 
     console.log(`[${new Date().toISOString()}] Fetching IPFS content for hash: ${hash}`);
