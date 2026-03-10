@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 
-// Replace this with your app URL
+// Replace with your Render app URL
 const APP_URL = "https://your-app-name.onrender.com";
 
 async function ping() {
